@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>COLXOZ — Мебель на заказ</title>
+<title>FORMA — Мебель на заказ</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
- 
+
   :root {
     --cream: #F5F0E8;
     --dark: #1A1712;
@@ -16,9 +16,9 @@
     --warm-gray: #8A8278;
     --border: rgba(184,149,90,0.25);
   }
- 
+
   html { scroll-behavior: smooth; }
- 
+
   body {
     font-family: 'Jost', sans-serif;
     background: var(--cream);
@@ -26,8 +26,8 @@
     overflow-x: hidden;
     cursor: none;
   }
- 
-  /* Custom cursor */
+
+  
   .cursor {
     position: fixed;
     width: 8px; height: 8px;
@@ -51,8 +51,8 @@
   }
   body.hovering .cursor { width: 12px; height: 12px; background: var(--dark); }
   body.hovering .cursor-ring { width: 56px; height: 56px; opacity: 0.3; }
- 
-  /* Navigation */
+
+  
   nav {
     position: fixed; top: 0; left: 0; right: 0;
     z-index: 100;
@@ -115,7 +115,7 @@
     background: var(--gold);
     color: var(--cream);
   }
- 
+
   /* Hero */
   .hero {
     min-height: 100vh;
@@ -211,7 +211,7 @@
   }
   .btn-ghost:hover { gap: 16px; color: var(--gold); }
   .btn-ghost span { font-size: 18px; }
- 
+
   .hero-right {
     position: relative;
     overflow: hidden;
@@ -253,10 +253,10 @@
     background: linear-gradient(to bottom, var(--gold), transparent);
     animation: scrollPulse 2s infinite;
   }
- 
-  /* Section styles */
+
+  
   section { padding: 120px 60px; }
- 
+
   .section-tag {
     font-size: 10px;
     letter-spacing: 0.22em;
@@ -272,7 +272,7 @@
     width: 24px; height: 1px;
     background: var(--gold);
   }
- 
+
   h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(40px, 5vw, 64px);
@@ -281,8 +281,8 @@
     letter-spacing: -0.01em;
   }
   h2 em { font-style: italic; color: var(--gold); }
- 
-  /* About */
+
+  
   .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -326,8 +326,8 @@
     font-weight: 300;
     margin-bottom: 24px;
   }
- 
-  /* Catalog */
+
+  
   .catalog { background: var(--dark); padding: 120px 60px; }
   .catalog .section-tag { color: var(--gold-light); }
   .catalog h2 { color: var(--cream); }
@@ -351,9 +351,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    transition: transform 0.6s ease;
   }
-  .catalog-item:hover .catalog-bg img { transform: scale(1.06); }
+  .catalog-item:hover .catalog-bg { transform: scale(1.04); }
   .catalog-overlay {
     position: absolute;
     bottom: 0; left: 0; right: 0;
@@ -386,8 +386,8 @@
     color: var(--cream);
     opacity: 0.5;
   }
- 
-  /* Process */
+
+  
   .process { border-top: 1px solid var(--border); }
   .process h2 { margin-bottom: 80px; }
   .process-steps {
@@ -426,8 +426,8 @@
     color: var(--warm-gray);
     font-weight: 300;
   }
- 
-  /* Materials */
+
+
   .materials {
     background: #F0EAE0;
     border-top: 1px solid var(--border);
@@ -473,8 +473,8 @@
     text-transform: uppercase;
     color: var(--warm-gray);
   }
- 
-  /* Testimonials */
+
+  
   .testimonials { border-top: 1px solid var(--border); }
   .testimonials-grid {
     display: grid;
@@ -515,8 +515,8 @@
     text-transform: uppercase;
     color: var(--gold);
   }
- 
-  /* Contact */
+
+  
   .contact {
     background: var(--dark);
     display: grid;
@@ -562,7 +562,7 @@
     font-weight: 300;
     line-height: 1.5;
   }
- 
+
   .contact-right { padding: 100px 80px; }
   .contact-right h3 {
     font-family: 'Cormorant Garamond', serif;
@@ -614,8 +614,8 @@
     margin-top: 8px;
   }
   .form-submit:hover { background: var(--gold-light); }
- 
-  /* Footer */
+
+  
   footer {
     background: #0E0C09;
     padding: 48px 60px;
@@ -642,7 +642,7 @@
     transition: color 0.3s;
   }
   .footer-links a:hover { color: var(--gold); }
- 
+
   /* Animations */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(30px); }
@@ -656,8 +656,8 @@
     0%, 100% { opacity: 1; transform: scaleY(1); }
     50% { opacity: 0.4; transform: scaleY(0.7); }
   }
- 
-  /* Reveal on scroll */
+
+  
   .reveal {
     opacity: 0;
     transform: translateY(32px);
@@ -673,23 +673,22 @@
 </style>
 </head>
 <body>
- 
+
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
- 
+
 <nav id="nav">
-  <a href="#" class="logo">COLXOZ</a>
+  <a href="#" class="logo">FOR<span>M</span>A</a>
   <ul class="nav-links">
     <li><a href="#catalog">Каталог</a></li>
     <li><a href="#process">Процесс</a></li>
     <li><a href="#materials">Материалы</a></li>
-    <li><a href="#about">О нас</a></li>
     <li><a href="#contact">Контакты</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Заказать</a>
 </nav>
- 
-<!-- Hero -->
+
+
 <section class="hero">
   <div class="hero-left">
     <div class="hero-tag">Мебель на заказ · Санкт-Петербург</div>
@@ -701,9 +700,36 @@
     </div>
   </div>
   <div class="hero-right">
-    <div class="hero-img" style="padding:0;">
-      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=900&auto=format&fit=crop&q=80" alt="Роскошный диван в интерьере" style="width:100%;height:100%;object-fit:cover;opacity:0;animation:fadeIn 1.5s 0.8s forwards;"/>
-      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(26,23,18,0.18),transparent);pointer-events:none;"></div>
+    <div class="hero-img">
+      <svg viewBox="0 0 400 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+        
+        <rect x="40" y="160" width="320" height="100" rx="4" fill="#2C2520" stroke="#B8955A" stroke-width="0.5" opacity="0.9"/>
+        <rect x="40" y="140" width="50" height="120" rx="4" fill="#3D342C" stroke="#B8955A" stroke-width="0.5" opacity="0.8"/>
+        <rect x="310" y="140" width="50" height="120" rx="4" fill="#3D342C" stroke="#B8955A" stroke-width="0.5" opacity="0.8"/>
+        <rect x="60" y="160" width="280" height="60" rx="4" fill="#352D25" opacity="0.6"/>
+        
+        <rect x="60" y="162" width="88" height="56" rx="3" fill="#4A3F35" stroke="#B8955A" stroke-width="0.3" opacity="0.8"/>
+        <rect x="156" y="162" width="88" height="56" rx="3" fill="#4A3F35" stroke="#B8955A" stroke-width="0.3" opacity="0.8"/>
+        <rect x="252" y="162" width="88" height="56" rx="3" fill="#4A3F35" stroke="#B8955A" stroke-width="0.3" opacity="0.8"/>
+        <!-- Ножки -->
+        <rect x="55" y="260" width="12" height="20" fill="#B8955A" opacity="0.7"/>
+        <rect x="333" y="260" width="12" height="20" fill="#B8955A" opacity="0.7"/>
+        <!-- Журнальный столик -->
+        <rect x="130" y="290" width="140" height="8" rx="2" fill="#5C4F42" stroke="#B8955A" stroke-width="0.3"/>
+        <rect x="145" y="298" width="5" height="30" fill="#B8955A" opacity="0.5"/>
+        <rect x="250" y="298" width="5" height="30" fill="#B8955A" opacity="0.5"/>
+        <!-- Торшер -->
+        <polygon points="320,60 350,120 290,120" fill="#2C2520" stroke="#B8955A" stroke-width="0.5" opacity="0.8"/>
+        <rect x="318" y="120" width="4" height="80" fill="#B8955A" opacity="0.4"/>
+        <ellipse cx="320" cy="200" rx="20" ry="4" fill="#4A3F35" opacity="0.6"/>
+        <!-- Свечение торшера -->
+        <ellipse cx="320" cy="100" rx="30" ry="18" fill="#B8955A" opacity="0.06"/>
+        <!-- Пол -->
+        <line x1="20" y1="328" x2="380" y2="328" stroke="#B8955A" stroke-width="0.5" opacity="0.2"/>
+        <!-- Декор линии -->
+        <line x1="20" y1="40" x2="20" y2="328" stroke="#B8955A" stroke-width="0.3" opacity="0.15"/>
+        <line x1="380" y1="40" x2="380" y2="328" stroke="#B8955A" stroke-width="0.3" opacity="0.15"/>
+      </svg>
     </div>
   </div>
   <div class="hero-scroll">
@@ -711,9 +737,9 @@
     <span>Scroll</span>
   </div>
 </section>
- 
-<!-- About -->
-<section class="about" id="about">
+
+
+<section class="about">
   <div class="about-left">
     <div class="section-tag reveal">О нас</div>
     <h2 class="reveal reveal-delay-1">Ремесло<br>и <em>точность</em></h2>
@@ -737,35 +763,33 @@
     </div>
   </div>
   <div class="about-right reveal reveal-delay-1">
-    <p>Всё началось с Димы. Наш основатель Дмитрий начал делать мебель руками ещё в 18 лет — в гараже, с минимумом инструментов и максимумом упорства. Сегодня за его плечами 15 лет опыта и тысячи довольных клиентов.</p>
-    <p>Дима лично контролирует каждый проект — от первого замера до финального монтажа. Он убеждён: хорошая мебель не делается на потоке. Только диалог с клиентом, только ручная работа, только проверенные материалы.</p>
-    <p>Команда, которую Дима собрал за эти годы — это мастера с душой. Каждый знает своё дело в совершенстве и разделяет одно правило: никаких компромиссов с качеством.</p>
-    <p>Приходите в шоурум — Дима или кто-то из его команды встретит вас лично, покажет образцы материалов и поможет придумать мебель вашей мечты. Без скриптов и навязчивых продаж.</p>
-    <div style="margin-top:32px;padding-top:28px;border-top:1px solid var(--border);display:flex;align-items:center;gap:16px;">
-      <div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;color:var(--dark);letter-spacing:0.03em;">Поляков Дмитрий</div>
-        <div style="margin-top:6px;display:flex;gap:4px;">
-          <span style="color:var(--gold);font-size:20px;">★</span>
-          <span style="color:var(--gold);font-size:20px;">★</span>
-          <span style="color:var(--gold);font-size:20px;">★</span>
-          <span style="color:var(--gold);font-size:20px;">★</span>
-          <span style="color:var(--gold);font-size:20px;">★</span>
-        </div>
-      </div>
-    </div>
+    <p>Мы создаём мебель, которая живёт десятилетиями. Каждое изделие разрабатывается в тесном диалоге с клиентом — от концепции до последнего штриха отделки.</p>
+    <p>Наше производство оснащено современным оборудованием, однако ключевые операции выполняются вручную опытными столярами. Это позволяет достичь точности, недоступной массовому производству.</p>
+    <p>Мы работаем с массивом дерева, шпоном, металлом и натуральными тканями. Все материалы проходят входной контроль и сертифицированы по европейским стандартам.</p>
   </div>
 </section>
- 
-<!-- Catalog -->
+
+
 <section class="catalog" id="catalog">
   <div class="section-tag reveal">Коллекция</div>
   <h2 class="reveal reveal-delay-1" style="color:var(--cream)">Наши <em>работы</em></h2>
   <div class="catalog-grid reveal reveal-delay-2">
- 
-    <!-- Large item - Wardrobe -->
+
+    
     <div class="catalog-item">
-      <div class="catalog-bg" style="padding:0;">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&auto=format&fit=crop&q=80" alt="Гардеробный шкаф" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;"/>
+      <div class="catalog-bg" style="background: linear-gradient(140deg,#2C2318,#3D3020);">
+        <svg viewBox="0 0 240 300" width="70%" fill="none">
+          <!-- Шкаф-купе -->
+          <rect x="10" y="20" width="220" height="260" rx="2" fill="#2A2018" stroke="#B8955A" stroke-width="0.5"/>
+          <line x1="120" y1="20" x2="120" y2="280" stroke="#B8955A" stroke-width="0.5" opacity="0.5"/>
+          <rect x="20" y="30" width="90" height="130" rx="1" fill="#352B1F" stroke="#B8955A" stroke-width="0.3" opacity="0.6"/>
+          <rect x="20" y="170" width="90" height="100" rx="1" fill="#352B1F" stroke="#B8955A" stroke-width="0.3" opacity="0.6"/>
+          <rect x="130" y="30" width="90" height="240" rx="1" fill="#352B1F" stroke="#B8955A" stroke-width="0.3" opacity="0.6"/>
+          <circle cx="115" cy="95" r="4" fill="#B8955A" opacity="0.8"/>
+          <circle cx="125" cy="95" r="4" fill="#B8955A" opacity="0.8"/>
+          <circle cx="115" cy="220" r="4" fill="#B8955A" opacity="0.8"/>
+          <circle cx="125" cy="220" r="4" fill="#B8955A" opacity="0.8"/>
+        </svg>
       </div>
       <span class="catalog-label">01</span>
       <div class="catalog-overlay">
@@ -773,11 +797,24 @@
         <div class="catalog-meta">Массив ореха · от 180 000 ₽</div>
       </div>
     </div>
- 
-    <!-- Item 2 - Dining -->
+
+    <!-- Item 2 -->
     <div class="catalog-item">
-      <div class="catalog-bg" style="padding:0;">
-        <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600&auto=format&fit=crop&q=80" alt="Обеденная группа" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;"/>
+      <div class="catalog-bg" style="background: linear-gradient(140deg,#1E1C18,#2C2820);">
+        <svg viewBox="0 0 200 200" width="65%" fill="none">
+          
+          <rect x="20" y="80" width="160" height="12" rx="2" fill="#4A3F30" stroke="#B8955A" stroke-width="0.5"/>
+          <rect x="30" y="92" width="8" height="80" fill="#3D342A" stroke="#B8955A" stroke-width="0.3" opacity="0.7"/>
+          <rect x="162" y="92" width="8" height="80" fill="#3D342A" stroke="#B8955A" stroke-width="0.3" opacity="0.7"/>
+          <rect x="25" y="170" width="150" height="4" rx="1" fill="#B8955A" opacity="0.3"/>
+          
+          <rect x="0" y="60" width="30" height="50" rx="2" fill="#2C2520" stroke="#B8955A" stroke-width="0.3" opacity="0.6"/>
+          <rect x="170" y="60" width="30" height="50" rx="2" fill="#2C2520" stroke="#B8955A" stroke-width="0.3" opacity="0.6"/>
+          <rect x="3" y="108" width="8" height="40" fill="#3D342A" opacity="0.5"/>
+          <rect x="19" y="108" width="8" height="40" fill="#3D342A" opacity="0.5"/>
+          <rect x="173" y="108" width="8" height="40" fill="#3D342A" opacity="0.5"/>
+          <rect x="189" y="108" width="8" height="40" fill="#3D342A" opacity="0.5"/>
+        </svg>
       </div>
       <span class="catalog-label">02</span>
       <div class="catalog-overlay">
@@ -785,11 +822,22 @@
         <div class="catalog-meta">Дуб · от 240 000 ₽</div>
       </div>
     </div>
- 
-    <!-- Item 3 - Bed -->
+
+    
     <div class="catalog-item">
-      <div class="catalog-bg" style="padding:0;">
-        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&auto=format&fit=crop&q=80" alt="Кровать" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;"/>
+      <div class="catalog-bg" style="background: linear-gradient(140deg,#201E1A,#2E2C26);">
+        <svg viewBox="0 0 200 200" width="65%" fill="none">
+          
+          <rect x="20" y="60" width="160" height="20" rx="3" fill="#3D342C" stroke="#B8955A" stroke-width="0.5"/>
+          <rect x="10" y="80" width="180" height="90" rx="2" fill="#2C2520" stroke="#B8955A" stroke-width="0.3" opacity="0.8"/>
+          <rect x="20" y="90" width="160" height="60" rx="2" fill="#352D25" opacity="0.6"/>
+          
+          <rect x="30" y="93" width="60" height="40" rx="2" fill="#4A3F35" stroke="#B8955A" stroke-width="0.3" opacity="0.7"/>
+          <rect x="110" y="93" width="60" height="40" rx="2" fill="#4A3F35" stroke="#B8955A" stroke-width="0.3" opacity="0.7"/>
+          
+          <rect x="20" y="170" width="8" height="18" fill="#B8955A" opacity="0.5"/>
+          <rect x="172" y="170" width="8" height="18" fill="#B8955A" opacity="0.5"/>
+        </svg>
       </div>
       <span class="catalog-label">03</span>
       <div class="catalog-overlay">
@@ -797,11 +845,26 @@
         <div class="catalog-meta">Ясень · от 160 000 ₽</div>
       </div>
     </div>
- 
-    <!-- Item 4 - Shelf -->
+
+   
     <div class="catalog-item">
-      <div class="catalog-bg" style="padding:0;">
-        <img src="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?w=600&auto=format&fit=crop&q=80" alt="Стеллаж" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;"/>
+      <div class="catalog-bg" style="background: linear-gradient(140deg,#1C1A16,#2A2820);">
+        <svg viewBox="0 0 200 200" width="65%" fill="none">
+          
+          <rect x="40" y="20" width="120" height="170" rx="2" fill="#2A2018" stroke="#B8955A" stroke-width="0.5"/>
+          <line x1="40" y1="60" x2="160" y2="60" stroke="#B8955A" stroke-width="0.3" opacity="0.4"/>
+          <line x1="40" y1="100" x2="160" y2="100" stroke="#B8955A" stroke-width="0.3" opacity="0.4"/>
+          <line x1="40" y1="140" x2="160" y2="140" stroke="#B8955A" stroke-width="0.3" opacity="0.4"/>
+         
+          <rect x="48" y="65" width="10" height="30" fill="#8A6A40" opacity="0.7"/>
+          <rect x="60" y="68" width="8" height="27" fill="#6B8A50" opacity="0.7"/>
+          <rect x="70" y="63" width="12" height="32" fill="#5A6A8A" opacity="0.7"/>
+          <rect x="84" y="67" width="9" height="28" fill="#8A5A5A" opacity="0.7"/>
+          <rect x="96" y="65" width="11" height="30" fill="#7A8A5A" opacity="0.7"/>
+          <rect x="48" y="105" width="14" height="30" fill="#6A5A8A" opacity="0.7"/>
+          <rect x="64" y="107" width="9" height="28" fill="#8A7A5A" opacity="0.7"/>
+          <rect x="75" y="103" width="11" height="32" fill="#5A8A7A" opacity="0.7"/>
+        </svg>
       </div>
       <span class="catalog-label">04</span>
       <div class="catalog-overlay">
@@ -809,11 +872,11 @@
         <div class="catalog-meta">Берёза · от 95 000 ₽</div>
       </div>
     </div>
- 
+
   </div>
 </section>
- 
-<!-- Process -->
+
+
 <section class="process" id="process">
   <div class="section-tag reveal">Как мы работаем</div>
   <h2 class="reveal reveal-delay-1">Четыре шага<br>до <em>идеальной</em> мебели</h2>
@@ -840,8 +903,8 @@
     </div>
   </div>
 </section>
- 
-<!-- Materials -->
+
+
 <section class="materials" id="materials">
   <div class="materials-header">
     <div>
@@ -885,8 +948,8 @@
     </div>
   </div>
 </section>
- 
-<!-- Testimonials -->
+
+
 <section class="testimonials">
   <div class="section-tag reveal">Отзывы</div>
   <h2 class="reveal reveal-delay-1">Нам <em>доверяют</em></h2>
@@ -905,8 +968,8 @@
     </div>
   </div>
 </section>
- 
-<!-- Contact -->
+
+
 <section class="contact" id="contact">
   <div class="contact-left">
     <div class="section-tag">Контакты</div>
@@ -923,7 +986,7 @@
         <div class="contact-icon">📞</div>
         <div>
           <div class="contact-info-label">Телефон</div>
-          <div class="contact-info-value"><a href="tel:+79773707981" style="color:inherit;text-decoration:none;">+7 (977) 370-79-81</a></div>
+          <div class="contact-info-value">+7 (812) 000-00-00</div>
         </div>
       </div>
       <div class="contact-info-item">
@@ -956,18 +1019,18 @@
     <button class="form-submit" onclick="handleSubmit(this)">Отправить заявку</button>
   </div>
 </section>
- 
+
 <footer>
-  <a href="#" class="logo" style="color:rgba(245,240,232,0.6)">COLXOZ</a>
-  <span class="footer-copy">© 2025 COLXOZ. Все права защищены.</span>
+  <a href="#" class="logo" style="color:rgba(245,240,232,0.6)">FOR<span style="color:var(--gold)">M</span>A</a>
+  <span class="footer-copy">© 2025 FORMA. Все права защищены.</span>
   <ul class="footer-links">
     <li><a href="#">Политика конфиденциальности</a></li>
     <li><a href="#">Договор оферты</a></li>
   </ul>
 </footer>
- 
+
 <script>
-  // Custom cursor
+  
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
   let mx = 0, my = 0, rx = 0, ry = 0;
@@ -986,20 +1049,20 @@
     el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
     el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
   });
- 
+
   // Nav scroll
   window.addEventListener('scroll', () => {
     document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
   });
- 
+
   // Reveal on scroll
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.12 });
   reveals.forEach(el => observer.observe(el));
- 
-  // Form submit
+
+  
   function handleSubmit(btn) {
     btn.textContent = '✓ Заявка отправлена';
     btn.style.background = '#5A7A50';
