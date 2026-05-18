@@ -711,22 +711,22 @@
         <rect x="60" y="162" width="88" height="56" rx="3" fill="#4A3F35" stroke="#B8955A" stroke-width="0.3" opacity="0.8"/>
         <rect x="156" y="162" width="88" height="56" rx="3" fill="#4A3F35" stroke="#B8955A" stroke-width="0.3" opacity="0.8"/>
         <rect x="252" y="162" width="88" height="56" rx="3" fill="#4A3F35" stroke="#B8955A" stroke-width="0.3" opacity="0.8"/>
-        <!-- Ножки -->
+        
         <rect x="55" y="260" width="12" height="20" fill="#B8955A" opacity="0.7"/>
         <rect x="333" y="260" width="12" height="20" fill="#B8955A" opacity="0.7"/>
-        <!-- Журнальный столик -->
+        
         <rect x="130" y="290" width="140" height="8" rx="2" fill="#5C4F42" stroke="#B8955A" stroke-width="0.3"/>
         <rect x="145" y="298" width="5" height="30" fill="#B8955A" opacity="0.5"/>
         <rect x="250" y="298" width="5" height="30" fill="#B8955A" opacity="0.5"/>
-        <!-- Торшер -->
+       
         <polygon points="320,60 350,120 290,120" fill="#2C2520" stroke="#B8955A" stroke-width="0.5" opacity="0.8"/>
         <rect x="318" y="120" width="4" height="80" fill="#B8955A" opacity="0.4"/>
         <ellipse cx="320" cy="200" rx="20" ry="4" fill="#4A3F35" opacity="0.6"/>
         <!-- Свечение торшера -->
         <ellipse cx="320" cy="100" rx="30" ry="18" fill="#B8955A" opacity="0.06"/>
-        <!-- Пол -->
+        
         <line x1="20" y1="328" x2="380" y2="328" stroke="#B8955A" stroke-width="0.5" opacity="0.2"/>
-        <!-- Декор линии -->
+       
         <line x1="20" y1="40" x2="20" y2="328" stroke="#B8955A" stroke-width="0.3" opacity="0.15"/>
         <line x1="380" y1="40" x2="380" y2="328" stroke="#B8955A" stroke-width="0.3" opacity="0.15"/>
       </svg>
@@ -1050,12 +1050,12 @@
     el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
   });
 
-  // Nav scroll
+
   window.addEventListener('scroll', () => {
     document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
   });
 
-  // Reveal on scroll
+  
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
